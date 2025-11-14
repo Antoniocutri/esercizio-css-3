@@ -1,18 +1,101 @@
-img{
-    width: 350px;
-    height: 250px;
+body{
+    font-family: 'Stack Sans Text';
+    margin: 0px;
 }
 
-/* tablet */
-@media (max-width: 1024px) {
-  h1{
-    font-size: 40px !important;
-  }
+h1{
+    font-family: 'Roboto', sans-serif;
 }
 
-/* mobile */
-@media (max-width: 576px) {
-  h1{
-    font-size: 30px !important;
-  }
+article h3{
+    color: red;
+}
+
+main{
+    background-color: lightblue;
+}
+
+main:hover {
+    background-color: red;
+}
+
+nav {
+    background-image: url('media/Val-d-Orcia-panorama.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav li:hover {
+    border-bottom: 2px solid red;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+section{
+    display: flex;
+}
+
+.immagine{
+    width: 300px;
+}
+
+article{
+    width: 60%;
+    padding: 10px;
+}
+
+aside{
+    display: flex;
+    background-color: rgb(154, 198, 66);
+}
+
+.torna-su{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    z-index: 9999;    
+}
+
+.torna-su:hover {
+    animation: spin 1s linear;
+}
+
+/* Media query per mobile */
+
+@media screen and (max-width: 576px) {
+    .logo{
+        width: 70px;
+    }
+
+    nav li {
+        font-size: 10px;
+    }
+
+    section{
+        flex-direction: column;
+    }
+
+    aside{
+        flex-direction: column;
+    }
+
+}
+
+/* Animazione immagine */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
